@@ -1,3 +1,28 @@
-# This file stores configurations for your Shopify app.
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-scopes = "write_products"
+client_id = "0cdc352042de3d501bf5d1a1d0cbe01f"
+name = "treenook-functions"
+application_url = "https://bo-comparative-schedules-caps.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "treenook.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_discounts,write_products"
+
+[auth]
+redirect_urls = [
+  "https://bo-comparative-schedules-caps.trycloudflare.com/auth/callback",
+  "https://bo-comparative-schedules-caps.trycloudflare.com/auth/shopify/callback",
+  "https://bo-comparative-schedules-caps.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
